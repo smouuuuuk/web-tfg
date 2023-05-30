@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    height: 4em;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+#imagen-inicio {
+    display: flex;
+    align-items: center;
+}
+
+#isotipo {
+    height: 2.5em;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+#navLinks {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2em;
+}
+
+#presentacion {
+    height: calc(100vh - 4em);
+    display: grid;
+    place-items: center;
+}
+
+#botonLecturaFacil {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1em;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 5%;
+    top: 6em;
+    border: 1px solid black;
+    border-radius: 32px;
+}
+
+#botonLecturaFacil:hover {
+    cursor: pointer;
+}
+
+#presentacion a {
+    position: absolute;
+    bottom: 5%;
+    height: 80px;
+    width: 80px;
+}
+
+#presentacion span {
+    font-size: 5em;
+    transform: rotate(90deg);
+    text-align: center;
+}
+
+#presentacion span:hover {
+    cursor: pointer;
+}
+
+#niidea {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00b7ff;
+    padding: 0 20%;
+}
+
+footer {
+    height: 14em;
+    background-color: black;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer a, 
+footer p {
+    color: white;
+}
+
+#siguenos {
+    font-weight: bold;
+}
+
+.redSocial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    margin: 0.5em 0;
+    font-size: 0.8em;
+}
+
+.redSocial img {
+    height: 25px;
+}
+
+#declaracionCopy {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#presentacionHistorias h3 {
+    font-weight: 400;
+    width: 40%;
+    padding: 4em;
+}
+
+#historias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border: 1px solid black;
+}
+
+.historia {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    border: 1px solid black;
+}
+
+.img-placeholder {
+    height: 300px;
+    width: 225px;
+    background-color: gray;
+    border-radius: 30px;
+}
+
+.imagen-historia {
+    height: 300px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#presentacionPersona #libro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#libroTexto {
+    margin: 4em;
+    width: 20em;
+}
+
+#libroImagen {
+    display: grid;
+    place-items: center;
+    margin: 4em;
+}
+
+#libro-placeholder {
+    background-color: gray;
+    border-radius: 25px;
+    width: 350px;
+    height: 500px;
+    transform: rotate(-2deg);
+}
+
+.button {
+    color: white;
+    background-color: black;
+    padding: 1em;
+    border-radius: 50px;
+}
+
+#videoPersona {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#video-placeholder {
+    background-color: gray;
+    height: 60%;
+    width: 70%;
+}
+
+#albumPersona {
+    padding: 2em;
+}
+
+#albumPersona h2 {
+    font-size: 2.5em;
+    margin-bottom: 2em;
+}
+
+#carruselFotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+#carruselFotos span {
+    font-size: 4em;
+}
+
+#foto1-placeholder{
+    background-color: gray;
+    border-radius: 25px;
+    height: 500px;
+    width: 333px;
+}
+
+#foto2-placeholder{
+    background-color: gray;
+    border-radius: 25px;
+    height: 500px;
+    width: 700px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#presentacionColabora {
+    display: flex;
+    flex-direction: column;
+}
+
+#presentacionColabora #botonLecturaFacil {
+    position: initial;
+    align-self: flex-end;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+#presentacionColabora h2 {
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.texto-colabora {
+    margin-left: 4rem;
+}
+
+#formas-colaborar {
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4em 0;
+}
+
+.colabora {
+    background-color: #00b7ff;
+    width: 16em;
+    padding: 0 1em;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.colabora h2 {
+    font-size: 1.4em;
+}
+
+.colabora p {
+    margin: 2em 0;
+}
+
+.colabora img {
+    margin: 2em 0;
+}
+
+.colabora a {
+    text-decoration: underline;
+}
