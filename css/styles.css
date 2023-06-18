@@ -239,16 +239,13 @@ footer p {
 }
 
 #videoPersona {
-    width: 100vw;
     height: 100vh;
     display: grid;
     place-items: center;
 }
 
-#video-placeholder {
-    background-color: gray;
-    aspect-ratio: 16/9;
-    height: 60%;
+#videoPersona img {
+    height: 70%;
 }
 
 #albumPersona {
@@ -257,10 +254,10 @@ footer p {
 
 #albumPersona h2 {
     font-size: 2.5em;
-    margin-bottom: 2em;
 }
 
 #carruselFotos {
+    margin: 4em 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,17 +269,11 @@ footer p {
 }
 
 #foto1-placeholder{
-    background-color: gray;
-    border-radius: 25px;
-    height: 500px;
-    width: 333px;
+    height: 450px;
 }
 
 #foto2-placeholder{
-    background-color: gray;
-    border-radius: 25px;
-    height: 500px;
-    width: 700px;
+    height: 450px;
 }
 
 
