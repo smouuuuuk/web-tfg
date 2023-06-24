@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/styles.css">
     <title>Un Gusto Conocerte</title>
 </head>
@@ -22,12 +23,18 @@
         </div>
     </nav>
     <header id="presentacionHistorias">
-        <div id="botonLecturaFacil">
-            <img src="./img/icono-lectura-facil.png" alt="">
-            <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+        <div id="contenedores-absolutos">
+            <div id="navegacion">
+                <a href="."><span class="material-symbols-outlined">arrow_circle_left</span></a>
+                <p>HISTORIAS</p>
+            </div>
+            <div id="botonLecturaFacil">
+                <img src="./img/icono-lectura-facil.png" alt="">
+                <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+            </div>
         </div>
         <h3>
-            Proin pharetra pharetra dui in lobortis. Aliquam porttitor nisi a dolor tincidunt placerat. Ut sagittis laoreet nulla a facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tempor dictum sem, ac ornare lacus eleifend rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla pulvinar lobortis ex id molestie. Nullam commodo posuere tellus, quis tincidunt nisl tincidunt non. Praesent consequat ullamcorper nulla, at tincidunt orci pharetra eget.
+            Creamos publicaciones editoriales únicas, íntimas y reales, escritas en Lectura Fácil. Porque queremos que este mensaje llegue a todos y todas.
         </h3>
     </header>
     <section id="historias">
@@ -37,23 +44,23 @@
             <h2 class="nombre">RENÉ</h2>
         </a>
         <a href="./persona.html" class="historia">
-            <img src="./img/martina.png" class="imagen-historia">
+            <div class="historia-placeholder"></div>
             <h2 class="nombre">MARTINA</h2>
         </a>
         <a href="./persona.html" class="historia">
-            <img src="./img/paco.png" class="imagen-historia">
+            <div class="historia-placeholder"></div>
             <h2 class="nombre">PACO</h2>
         </a>
         <a href="./persona.html" class="historia">
-            <img src="./img/lucia.png" class="imagen-historia">
+            <div class="historia-placeholder"></div>
             <h2 class="nombre">LUCÍA</h2>
         </a>
         <a href="./persona.html" class="historia">
-            <img src="./img/esteban.png" class="imagen-historia">
+            <div class="historia-placeholder"></div>
             <h2 class="nombre">ESTEBAN</h2>
         </a>
         <a href="./persona.html" class="historia">
-            <img src="./img/eva.png" class="imagen-historia">
+            <div class="historia-placeholder"></div>
             <h2 class="nombre">EVA</h2>
         </a>
     </section>
@@ -72,6 +79,14 @@
                 <a href="https://www.youtube.com/ungustoconocerte" target="_blank">UN GUSTO CONCERTE</a>
             </div>
         </div>
+        <p id="escribenos">¿ALGUNA DUDA? ¡ESCRÍBENOS!</p>
+        <a id="footer-mail" href="mailto:hola@ungustoconcerte.es">HOLA@UNGUSTOCONOCERTE.ES</a>
+        <form id="footer-form">
+            <p id="suscribete">SUSCRÍBETE A NUESTRA NEWSLETTER</p>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            <input type="text" name="email" id="email" placeholder="Correo electrónico" required>
+            <input type="submit" value="¡LISTO!">
+        </form>
         <p id="declaracionCopy">© UN GUSTO CONOCERTE | 2023</p>
     </footer>
 </body>

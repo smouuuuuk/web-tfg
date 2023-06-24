@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     scroll-behavior: smooth;
+    font-weight: 200;
 }
 
 a {
@@ -85,15 +86,34 @@ nav div {
     place-items: center;
 }
 
+#contenedores-absolutos {
+    position: absolute;
+    top: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+}
+
+#navegacion {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+#navegacion span {
+    font-size: 2.5em;
+    font-weight: 200;
+    line-height: normal;
+}
+
 #botonLecturaFacil {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 1em;
     padding: 0.5em 1em;
-    position: absolute;
-    right: 5%;
-    top: 6em;
     border: 2px solid black;
     border-radius: 32px;
 }
@@ -286,10 +306,10 @@ footer p {
     border: 1px solid black;
 }
 
-.img-placeholder {
+.historia-placeholder {
     height: 60%;
     width: 45%;
-    background-color: gray;
+    background-color: rgb(199, 199, 199);
     border-radius: 30px;
 }
 
@@ -303,12 +323,23 @@ footer p {
 
 
 
-
-
-
-
 #presentacionPersona > p {
     padding: 2em 4em;
+}
+
+#navegacion-a-historias {
+    position: relative;
+}
+
+#navegacion-a-historias::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background: black;
+
 }
 
 #presentacionPersona #libro {
@@ -316,9 +347,13 @@ footer p {
     grid-template-columns: 1fr 1fr;
 }
 
+#libro {
+    margin-top: 9em;
+}
+
 #libroTexto {
     position: relative;
-    margin: 4em;
+    margin: 0 4em;
     width: 20em;
 }
 
@@ -338,7 +373,7 @@ footer p {
 #libroImagen {
     display: grid;
     place-items: center;
-    margin: 4em;
+    margin: 0 4em;
 }
 
 #libroImagen img {
@@ -404,15 +439,16 @@ footer p {
 
 
 
-#presentacionColabora {
+#quieres-colaborar {
+    margin-top: 9em;
     display: flex;
     flex-direction: column;
 }
 
-#presentacionColabora h2 {
+#quieres-colaborar h2 {
     font-size: 5em;
-    margin-top: 1em;
     margin-bottom: 0.5em;
+    font-weight: 200;
 }
 
 .texto-colabora {
@@ -431,26 +467,25 @@ footer p {
 .colabora {
     background-color: var(--color-corporativo);
     width: 30%;
-    aspect-ratio: 3/4;
     padding: 0 1em;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: auto 8em;
     border-radius: 25px;
+    aspect-ratio: 1/1;
 }
 
 .colabora h2 {
-    font-size: 2em;
+    font-size: 1.75em;
+    padding: 0 .5em;
 }
 
-.colabora p {
-    margin: 2em 0;
+.colabora-uno {
+    margin-bottom: 4em;
 }
 
 .colabora img {
-    height: 15%;
+    height: 60px;
     margin: 2em 0;
 }
 

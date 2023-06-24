@@ -22,29 +22,43 @@
         </div>
     </nav>
     <header id="presentacionColabora">
-        <div id="botonLecturaFacil">
-            <img src="./img/icono-lectura-facil.png" alt="">
-            <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+        <div id="contenedores-absolutos">
+            <div id="navegacion">
+                <a href="."><span class="material-symbols-outlined">arrow_circle_left</span></a>
+                <p>PARTICIPA</p>
+            </div>
+            <div id="botonLecturaFacil">
+                <img src="./img/icono-lectura-facil.png" alt="">
+                <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+            </div>
         </div>
-        <h2 class="texto-colabora">¿QUIERES <br> COLABORAR?</h2>
-        <p class="texto-colabora">¿Te gustaría colaborar con "Un gusto conocerte"?</p>
-        <p class="texto-colabora">A continuación te explicamos cómo puedes ayudarnos.</p>
+        <div id="quieres-colaborar">
+            <h2 class="texto-colabora">¿QUIERES <br> COLABORAR?</h2>
+            <p class="texto-colabora">¿Te gustaría colaborar con "Un gusto conocerte"?</p>
+            <p class="texto-colabora">A continuación te explicamos cómo puedes ayudarnos.</p>
+        </div>
     </header>
 
     <section id="formas-colaborar">
         <div class="colabora">
-            <img src="./img/cart.png" alt="">
-            <h2>COMPRA NUESTROS LIBROS</h2>
+            <div class="colabora-uno">
+                <img src="./img/cart.png" alt="">
+                <h2>COMPRA NUESTROS LIBROS</h2>
+            </div>
             <p>Conoce dónde puedes comprarlos <a href="">aquí</a></p>
         </div>
         <div class="colabora">
-            <img src="./img/talk.png" alt="">
-            <h2>HABLA DE NOSOTROS</h2>
+            <div class="colabora-uno">
+                <img src="./img/talk.png" alt="">
+                <h2>HABLA DE NOSOTROS</h2>
+            </div>
             <p>Cuéntale a la gente qué hacemos. Recomienda leer nuestros libros. ¿Prefieres que lo contemos nosotros? Conoce cómo hacerlo <a href="">aquí</a></p>
         </div>
         <div class="colabora">
-            <img src="img/design.png" alt="">
-            <h2>AYÚDANOS A DISEÑAR</h2>
+            <div class="colabora-uno">
+                <img src="img/design.png" alt="">
+                <h2>AYÚDANOS A DISEÑAR</h2>
+            </div>
             <p>¿Eres diseñador o diseñadora? Conoce cómo colaborar <a href="">aquí</a></p>
         </div>
     </section>
@@ -61,6 +75,14 @@
                 <a href="https://www.youtube.com/ungustoconocerte" target="_blank">UN GUSTO CONCERTE</a>
             </div>
         </div>
+        <p id="escribenos">¿ALGUNA DUDA? ¡ESCRÍBENOS!</p>
+        <a id="footer-mail" href="mailto:hola@ungustoconcerte.es">HOLA@UNGUSTOCONOCERTE.ES</a>
+        <form id="footer-form">
+            <p id="suscribete">SUSCRÍBETE A NUESTRA NEWSLETTER</p>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            <input type="text" name="email" id="email" placeholder="Correo electrónico" required>
+            <input type="submit" value="¡LISTO!">
+        </form>
         <p id="declaracionCopy">© UN GUSTO CONOCERTE | 2023</p>
     </footer>
 </body>
