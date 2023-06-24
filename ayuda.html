@@ -25,43 +25,44 @@
         <div id="contenedores-absolutos">
             <div id="navegacion">
                 <a href="."><span class="material-symbols-outlined">arrow_circle_left</span></a>
-                <p>PARTICIPA</p>
+                <p><a href="./colabora.html" id="navegacion-a-historias">PARTICIPA</a> > AYÚDANOS A DISEÑAR</p>
             </div>
             <div id="botonLecturaFacil">
                 <img src="./img/icono-lectura-facil.png" alt="">
                 <p>DESACTIVAR<br> LECTURA FÁCIL</p>
             </div>
         </div>
-        <div id="quieres-colaborar">
-            <h2 class="texto-colabora">¿QUIERES <br> COLABORAR?</h2>
-            <p class="texto-colabora">¿Te gustaría colaborar con "Un gusto conocerte"?</p>
-            <p class="texto-colabora">A continuación te explicamos cómo puedes ayudarnos.</p>
+        <div id="quieres-ayudar">
+            <h2 class="texto-colabora">AYÚDANOS A <br> DISEÑAR</h2>
+            <div id="disenar">
+                <div id="disenar-texto">
+                    <p>¿Te gustaría diseñar el próximo libro con nosotros?</p>
+                    <p>Si eres diseñador o diseñadora puedes formar parte del proyecto diseñando con nosotros de formar activa.</p>
+                    <p>Para participar solo tienes que rellenar el formulario a continuación y nos pondremos en contacto contigo.</p>
+                </div>
+                <form id="disenar-form">
+                    <div id="disenar-nombre">
+                        <label for="nombre-diseno">NOMBRE</label>
+                        <input type="text" name="nombre-diseno" id="nombre-diseno" required>
+                    </div>
+                    <div id="disenar-email">
+                        <label for="email-diseno">E-MAIL</label>
+                        <input type="text" name="email-diseno" id="email-diseno" required>
+                    </div>
+                    <div id="disenar-portfolio">
+                        <label for="portfolio-diseno">PORTFILIO .PDF</label>
+                        <input type="text" name="portfolio-diseno" id="portfolio-diseno" required>
+                    </div>
+                    <div id="disenar-por-que">
+                        <label for="por-que-diseno">¿POR QUÉ TE GUSTARÍA COLABORAR?</label>
+                        <textarea name="por-que-diseno" id="por-que-diseno" required></textarea>
+                    </div>
+                    <input type="submit" value="¡VAMOS!">
+                </form>
+
+            </div>
         </div>
     </header>
-
-    <section id="formas-colaborar">
-        <div class="colabora">
-            <div class="colabora-uno">
-                <img src="./img/cart.png" alt="">
-                <h2>COMPRA NUESTROS LIBROS</h2>
-            </div>
-            <p>Conoce dónde puedes comprarlos <a href="">aquí</a></p>
-        </div>
-        <div class="colabora">
-            <div class="colabora-uno">
-                <img src="./img/talk.png" alt="">
-                <h2>HABLA DE NOSOTROS</h2>
-            </div>
-            <p>Cuéntale a la gente qué hacemos. Recomienda leer nuestros libros. ¿Prefieres que lo contemos nosotros? Conoce cómo hacerlo <a href="">aquí</a></p>
-        </div>
-        <div class="colabora">
-            <div class="colabora-uno">
-                <img src="img/design.png" alt="">
-                <h2>AYÚDANOS A DISEÑAR</h2>
-            </div>
-            <p>¿Eres diseñador o diseñadora? Conoce cómo colaborar <a href="./ayuda.html">aquí</a></p>
-        </div>
-    </section>
     
     <footer>
         <p id="siguenos">¡SÍGUENOS EN REDES!</p>

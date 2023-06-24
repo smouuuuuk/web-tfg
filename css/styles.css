@@ -492,3 +492,29 @@ footer p {
 .colabora a {
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+#quieres-ayudar {
+    margin-top: 9em;
+    display: flex;
+    flex-direction: column;
+}
+
+#quieres-ayudar h2 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+#disenar {
+    padding: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
