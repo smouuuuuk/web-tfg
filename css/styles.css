@@ -1,3 +1,7 @@
+:root {
+    --color-corporativo: #00b7ff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +45,40 @@ nav div {
     gap: 2em;
 }
 
+#navLinks li {
+    position: relative;
+}
+
+#navLinks li:not(.menu-active):after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#navLinks li:not(.menu-active):hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.menu-active:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 100%;
+}
+
 #presentacion {
     height: calc(100vh - 4em);
     display: grid;
@@ -56,7 +94,7 @@ nav div {
     position: absolute;
     right: 5%;
     top: 6em;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 32px;
 }
 
@@ -81,27 +119,26 @@ nav div {
     cursor: pointer;
 }
 
-#niidea {
-    height: calc(100vh - 14em);
+#quienes-somos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #00b7ff;
-    padding: 0 20%;
+    background-color: var(--color-corporativo);
+    padding: 8em 20%;
 }
 
-#niidea p {
+#quienes-somos p {
     max-width: 50em;
 }
 
 footer {
-    height: 14em;
     background-color: black;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 2em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 2em;
 }
 
 footer a, 
@@ -113,12 +150,16 @@ footer p {
     font-weight: bold;
 }
 
+#socials {
+    grid-row: 2;
+}
+
 .redSocial {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1em;
-    margin: 0.5em 0;
+    margin-bottom: 0.5em;
     font-size: 0.8em;
 }
 
@@ -126,7 +167,50 @@ footer p {
     height: 25px;
 }
 
+#escribenos {
+    text-align: center;
+}
+
+#footer-mail {
+    text-align: center;
+    grid-row: 2;
+}
+
+#suscribete {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#footer-form {
+    grid-row: 1/3;
+    width: 70%;
+    place-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-form input[type="text"] {
+    border-radius: 7px;
+    border: none;
+    padding: .25em;
+    margin-bottom: .25em;
+}
+
+#footer-form input[type="submit"] {
+    margin-top: 1em;
+    padding: .5em 2em;
+    border-radius: 7px;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--color-corporativo);
+}
+
+#footer-form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
 #declaracionCopy {
+    grid-column: 1/4;
     text-align: center;
     font-size: 0.75em;
 }
@@ -314,7 +398,7 @@ footer p {
 }
 
 .colabora {
-    background-color: #00b7ff;
+    background-color: var(--color-corporativo);
     width: 30%;
     aspect-ratio: 3/4;
     padding: 0 1em;
