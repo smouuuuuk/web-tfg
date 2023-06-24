@@ -37,25 +37,27 @@
             <div id="disenar">
                 <div id="disenar-texto">
                     <p>¿Te gustaría diseñar el próximo libro con nosotros?</p>
+                    <br>
                     <p>Si eres diseñador o diseñadora puedes formar parte del proyecto diseñando con nosotros de formar activa.</p>
+                    <br>
                     <p>Para participar solo tienes que rellenar el formulario a continuación y nos pondremos en contacto contigo.</p>
                 </div>
                 <form id="disenar-form">
-                    <div id="disenar-nombre">
+                    <div id="disenar-nombre" class="disenar-text">
                         <label for="nombre-diseno">NOMBRE</label>
                         <input type="text" name="nombre-diseno" id="nombre-diseno" required>
                     </div>
-                    <div id="disenar-email">
-                        <label for="email-diseno">E-MAIL</label>
+                    <div id="disenar-email" class="disenar-text">
+                        <label for="email-diseno">E&#x2011;MAIL</label>
                         <input type="text" name="email-diseno" id="email-diseno" required>
                     </div>
-                    <div id="disenar-portfolio">
-                        <label for="portfolio-diseno">PORTFILIO .PDF</label>
-                        <input type="text" name="portfolio-diseno" id="portfolio-diseno" required>
+                    <div id="disenar-portfolio" class="disenar-text">
+                        <label for="portfolio-diseno">PORTFILIO&nbsp;.PDF</label>
+                        <input type="file" accept=".pdf" name="portfolio-diseno" id="portfolio-diseno" required>
                     </div>
                     <div id="disenar-por-que">
                         <label for="por-que-diseno">¿POR QUÉ TE GUSTARÍA COLABORAR?</label>
-                        <textarea name="por-que-diseno" id="por-que-diseno" required></textarea>
+                        <textarea name="por-que-diseno" id="por-que-diseno" rows="8" required></textarea>
                     </div>
                     <input type="submit" value="¡VAMOS!">
                 </form>
