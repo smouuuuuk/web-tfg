@@ -16,6 +16,62 @@ a {
     color: black;
 }
 
+
+
+
+
+
+
+#popup-inicio-web{
+    display: none;
+    opacity: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 1.5s ease-out;
+}
+
+#popup-carta {
+    position: absolute;
+    height: 75vh;
+    width: 80vw;
+    background-color: var(--color-corporativo);
+    border-radius: 50px;
+    top: calc((25vh + 4em) / 2);
+    left: 10vw;
+}
+
+#cierra-popup {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    color: white;
+    font-size: 3em;
+}
+
+#cierra-popup:hover {
+    cursor: pointer;
+}
+
+#boton-activar {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 2em;
+    border-radius: 3em;
+}
+
+#boton-activar:hover {
+    cursor: pointer;
+}
+
 nav {
     height: 4em;
     border-bottom: 2px solid black;
