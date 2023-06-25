@@ -8,7 +8,7 @@
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     scroll-behavior: smooth;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 a {
@@ -529,6 +529,7 @@ footer p {
     margin-top: 12em;
     display: flex;
     flex-direction: column;
+    margin-bottom: 4em;
 }
 
 #quieres-ayudar h2 {
@@ -542,28 +543,44 @@ footer p {
     padding-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
 }
 
-#disenar-form input[type="text"] {
+.textbox {
     margin-left: 1em;
     border: none;
     width: 100%;
 }
 
 #disenar-form input[type="file"] {
-    float: right;
+    display: none;
 }
 
-#disenar-form input[type="text"]:focus {
+.textbox:focus {
     outline: none;
 }
 
 .disenar-text {
+    height: 30px;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
     padding-bottom: .5em;
     margin-bottom: .5em;
+}
+
+#disenar-portfolio {
+    display: flex;
+    align-items: center;
+}
+
+#disenar-portfolio img {
+    height: 28px;
+    transform: translateY(2px);
+}
+
+#disenar-portfolio label {
+    cursor: pointer;
 }
 
 #disenar-por-que {
@@ -580,7 +597,7 @@ footer p {
     outline: none;
 }
 
-#disenar-form input[type="submit"] {
+.button[type="submit"] {
     background-color: black;
     color: white;
     border: none;
@@ -590,4 +607,29 @@ footer p {
 
 #disenar-form input[type="submit"] {
     float: right;
+}
+
+#lectura-facil h2 {
+    font-size: 5em;
+    margin-bottom: 1em;
+    line-height: 1em;
+}
+
+#lectura-facil-todo {
+    padding: 4em;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+}
+
+#lectura-facil-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#lectura-facil-form input[type="submit"]{
+    float: right;
+    align-self: flex-end;
 }

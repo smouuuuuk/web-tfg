@@ -45,26 +45,49 @@
                 <form id="disenar-form">
                     <div id="disenar-nombre" class="disenar-text">
                         <label for="nombre-diseno">NOMBRE</label>
-                        <input type="text" name="nombre-diseno" id="nombre-diseno" required>
+                        <input type="text" class="textbox" name="nombre-diseno" id="nombre-diseno" required>
                     </div>
                     <div id="disenar-email" class="disenar-text">
                         <label for="email-diseno">E&#x2011;MAIL</label>
-                        <input type="text" name="email-diseno" id="email-diseno" required>
+                        <input type="text" class="textbox" name="email-diseno" id="email-diseno" required>
                     </div>
                     <div id="disenar-portfolio" class="disenar-text">
-                        <label for="portfolio-diseno">PORTFILIO&nbsp;.PDF</label>
+                        <p>PORTFILIO&nbsp;.PDF</p>
+                        <label for="portfolio-diseno">
+                            <img src="./img/flecha-subida.svg">
+                        </label>
                         <input type="file" accept=".pdf" name="portfolio-diseno" id="portfolio-diseno" required>
                     </div>
                     <div id="disenar-por-que">
                         <label for="por-que-diseno">¿POR QUÉ TE GUSTARÍA COLABORAR?</label>
                         <textarea name="por-que-diseno" id="por-que-diseno" rows="8" required></textarea>
                     </div>
-                    <input type="submit" value="¡VAMOS!">
+                    <input type="submit" class="button" value="¡VAMOS!">
                 </form>
 
             </div>
         </div>
     </header>
+
+    <section id="lectura-facil">
+        <h2 class="texto-colabora">LA LECTURA <br> FÁCIL</h2>
+        <div id="lectura-facil-todo">
+            <div id="lectura-facil-texto">
+                <p>Nosotros usamos la lectura fácil con el objetivo de que la información sea lo más accesible posible para todos y todas.</p>
+                <br>
+                <p>Estamos trabajando en un Manual de Buenas Prácticas totalmente gratuito, donde podrás conocer más sobre la lectura fácil y como poder aplicarla.</p>
+                <br>
+                <p>Pon tu mail aquí y te avisaremos cuando esté disponible:</p>
+            </div>
+            <form id="lectura-facil-form">
+                <div id="lectura-email" class="disenar-text">
+                    <label for="email-lectura">E&#x2011;MAIL</label>
+                    <input type="text" class="textbox" name="email-lectura" id="email-lectura" required>
+                </div>
+                <input type="submit" class="button" value="¡LISTO!">
+            </form>
+        </div>
+    </section>
     
     <footer>
         <p id="siguenos">¡SÍGUENOS EN REDES!</p>
