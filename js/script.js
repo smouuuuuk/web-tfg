@@ -10,7 +10,7 @@ const activarPopUp = () => {
     );  
 } 
 
-function cierraPopUp (event){
+const cierraPopUp = (event) => {
     if (event.target.attributes[0]?.nodeValue == "cierra-popup"){
         console.log("No activar Lectura Fácil");
         localStorage.setItem('lecturaFacil', 'no');
@@ -28,12 +28,25 @@ function cierraPopUp (event){
     );
 }
 
+const abreMenu = () => {
+    let menu = document.getElementById("navLinks");
+    menu.style.left = "calc(0px - 1rem)";
+}
 
-
+const cierraMenu = () => {
+    let menu = document.getElementById("navLinks");
+    menu.style.left = "100vw";
+}
 
 
 document.addEventListener("DOMContentLoaded", function(){
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
     if (localStorage.getItem('lecturaFacil') == undefined) activarPopUp();
-    document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);
-    document.getElementById("boton-activar").addEventListener("click", cierraPopUp);
+    if (page == "index.html") {
+        document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);
+        document.getElementById("boton-activar").addEventListener("click", cierraPopUp);
+    }
+    document.getElementById("abreMenu").addEventListener("click", abreMenu);
+    document.getElementById("cierraMenu").addEventListener("click", cierraMenu);
 });

@@ -81,7 +81,7 @@ nav {
     padding: 0 2em;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     z-index: 99;
 }
@@ -98,6 +98,10 @@ nav {
 nav div {
     display: flex;
     align-items: center;
+}
+
+#abreMenu, #cierraMenu {
+    display: none;
 }
 
 #navLinks {
@@ -688,4 +692,121 @@ footer p {
 #lectura-facil-form input[type="submit"]{
     float: right;
     align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    
+    #abreMenu {
+        display: flex;
+        align-items: center;
+        font-size: 2.5em;
+    }
+
+    #abreMenu:hover {
+        cursor: pointer;
+    }
+
+    nav {
+        padding: 0 1em;
+    }
+
+    nav > div {
+        position: absolute;
+    }
+
+    #navLinks {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 100vw;
+        transition: left 1s ease;
+        background-color: var(--color-corporativo);
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 0;
+        align-items: center;
+        padding: 0 2em;
+    }
+
+    #navLinks li {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #cierraMenu {
+        display: initial;
+        justify-self: flex-end;
+    }
+
+    #cierraMenu span {
+        font-size: 1.5em;
+    }
+
+    #cierraMenu:hover{
+        cursor: pointer;
+    }
+
+    #navLinks span {
+        color: black;
+    }
+
+    .menu-active:after {
+        height: 0;
+    }
+
+    #navLinks li:not(.menu-active):after {
+        height: 0;
+    }
+
+    #contenedores-absolutos {
+        left: -2em;
+        top: 2em;
+    }
+    
+    #botonLecturaFacil {
+        z-index: 90;
+        top: 5em;
+        right: 1em;
+        padding: 0.5em 1em;
+    }
+    
+    #botonLecturaFacil img {
+        height: 30px;
+    }
+    
+    #botonLecturaFacil p {
+        font-size: 0.6em;
+    }
+
+    #presentacion > img {
+        max-width: 80%;
+    }
+
+    #quienes-todo {
+        flex-direction: column;
+    }
+
+
+
+
+    #presentacionHistorias h3 {
+        padding: 0 2em;
+    }
+
+    #historias {
+        grid-template-columns: initial;
+        grid-template-rows: initial;
+        grid-auto-rows: auto;
+    }
+
 }
