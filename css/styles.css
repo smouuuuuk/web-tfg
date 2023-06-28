@@ -453,6 +453,10 @@ footer p {
     bottom: 0;
 }
 
+#libroImagenVert {
+    display: none;
+}
+
 #libroImagen {
     display: grid;
     place-items: center;
@@ -694,6 +698,10 @@ footer p {
     align-self: flex-end;
 }
 
+#lectura-email {
+    margin-bottom: 1em;
+}
+
 
 
 
@@ -704,6 +712,39 @@ footer p {
 
 
 @media only screen and (max-width: 500px) {
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    #siguenos {
+        margin-bottom: 0.5rem;
+    }
+
+    #escribenos, #suscribete {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #declaracionCopy {
+        margin-top: 2rem;
+    }
+
+    #footer-form {
+        place-self: initial;
+    }
+
+    #footer-form input[type="submit"]{
+        align-self: center;
+    }
+
+
+
+
     
     #abreMenu {
         display: flex;
@@ -807,6 +848,132 @@ footer p {
         grid-template-columns: initial;
         grid-template-rows: initial;
         grid-auto-rows: auto;
+    }
+
+
+
+
+
+    #quieres-colaborar {
+        margin-top: 10em;
+    }
+
+    #quieres-colaborar h2 {
+        font-size: 3em;
+        margin: 0 1rem;
+    }
+
+    #quieres-colaborar p {
+        font-size: 1em;
+        margin: 0 1rem;
+    }
+
+    #formas-colaborar {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .colabora {
+        width: auto;
+    }
+
+    .colabora-uno {
+        margin-bottom: 2em;
+    }
+
+
+
+
+
+
+    #quieres-ayudar {
+        margin-top: 10em;
+    }
+
+    #quieres-ayudar h2 {
+        font-size: 3em;
+        margin: 0 1rem;
+    }
+
+    #disenar {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    #lectura-facil h2 {
+        font-size: 3em;
+        margin: 0 1rem;
+    }
+
+    #lectura-facil-todo {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+
+
+
+
+
+
+    #presentacionPersona #libro {
+        display: flex;
+    }
+
+    #libroTexto {
+        margin: 0 1em;
+    }
+
+    #libroTexto p {
+        margin: 1em 0;
+    }
+
+    #libroImagen {
+        display: none;
+    }
+    
+    #libroImagenVert {
+        display: flex;
+        margin-top: 2em;
+        margin-bottom: 5em;
+        width: calc(100vw - 2em);
+        justify-content: center
+    }
+
+    #libroImagenVert img {
+        width: 80%;
+    }
+
+    #videoPersona {
+        height: initial;
+        margin: 4em 0;
+    }
+
+    #videoPersona img {
+        width: 80%;
+        height: initial;
+    }
+
+    #albumPersona{
+        padding: 1em;
+    }
+
+    #carruselFotos {
+        justify-content: initial;
+        margin: 2em 0;
+        padding: 1em 0;
+        overflow-x: scroll;
+        gap: 1em;
+    }
+
+    #carruselFotos span {
+        display: none;
+    }
+
+    #carruselFotos img {
+        height: 300px;
     }
 
 }
