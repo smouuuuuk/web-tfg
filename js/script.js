@@ -40,10 +40,8 @@ const cierraMenu = () => {
 
 
 document.addEventListener("DOMContentLoaded", function(){
-    console.log("hola");
     var path = window.location.pathname;
     var page = path.split("/").pop();
-    console.log(page);
     if (localStorage.getItem('lecturaFacil') == undefined) activarPopUp();
     if (page == "" || page == "index.html") {
         document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);

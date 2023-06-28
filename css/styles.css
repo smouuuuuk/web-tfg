@@ -871,10 +871,12 @@ footer p {
     #formas-colaborar {
         flex-direction: column;
         gap: 2em;
+        margin: initial;
+        align-items: center;
     }
 
     .colabora {
-        width: auto;
+        min-width: 80%;
     }
 
     .colabora-uno {
