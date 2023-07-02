@@ -16,7 +16,7 @@ const cierraPopUp = (event) => {
         console.log("No Desactivar Lectura Fácil");
         localStorage.setItem('lecturaFacil', 'si');
     } else {
-        $("#showLecturaFacil").load("desactivarLecturaFacil.html");
+        $("#showLecturaFacil").load("extra/desactivarLecturaFacil.html");
         console.log("Desactivar Lectura Fácil");
         localStorage.setItem('lecturaFacil', 'no');
 
@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", function(){
     
     $(function() {
         if (localStorage.getItem("lecturaFacil") == "no") {
-            $("#showLecturaFacil").load("desactivarLecturaFacil.html");
+            $("#showLecturaFacil").load("extra/desactivarLecturaFacil.html");
         }
         $("#botonLecturaFacil").click(function() {
             if (localStorage.getItem("lecturaFacil") == "no") {
-                $("#showLecturaFacil").load("activarLecturaFacil.html");
+                $("#showLecturaFacil").load("extra/activarLecturaFacil.html");
                 localStorage.setItem("lecturaFacil", "si");
             } else if (localStorage.getItem("lecturaFacil") == "si") {
-                $("#showLecturaFacil").load("desactivarLecturaFacil.html");
+                $("#showLecturaFacil").load("extra/desactivarLecturaFacil.html");
                 localStorage.setItem("lecturaFacil", "no");
             }
         })
