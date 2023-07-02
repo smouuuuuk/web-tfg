@@ -41,24 +41,6 @@ const cierraMenu = () => {
     menu.style.left = "100vw";
 }
 
-const checkSiLecturaFacil = () => {
-    if (localStorage.getItem("lecturaFacil") == "no") {
-        document.body.innerHTML = document.body.innerHTML.replace("<style>.no-lectura-facil {display: none !important;}</style>" , "<style>.si-lectura-facil {display: none !important;}</style>");
-    }
-}
-
-const cambiaLecturaFacil = () => {
-    console.log("Cambiando modo Lectura Fácil");
-    if (localStorage.getItem("lecturaFacil") == "no") {
-        document.body.innerHTML = document.body.innerHTML.replace("<style>.no-lectura-facil {display: none !important;}</style>" , "<style>.si-lectura-facil {display: none !important;}</style>");
-        localStorage.setItem("lecturaFacil", "si");
-    } else if (localStorage.getItem("lecturaFacil") == "si") {
-        document.body.innerHTML = document.body.innerHTML.replace("<style>.si-lectura-facil {display: none !important;}</style>" , "<style>.no-lectura-facil {display: none !important;}</style>");
-        localStorage.setItem("lecturaFacil", "no");
-    }
-}
-
-
 document.addEventListener("DOMContentLoaded", function(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
@@ -67,8 +49,23 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);
         document.getElementById("boton-activar").addEventListener("click", cierraPopUp);
     }
-    checkSiLecturaFacil();
     document.getElementById("abreMenu").addEventListener("click", abreMenu);
     document.getElementById("cierraMenu").addEventListener("click", cierraMenu);
-    document.getElementById("botonLecturaFacil").addEventListener("click", cambiaLecturaFacil);
+
+    
+    $(function() {
+        if (localStorage.getItem("lecturaFacil") == "no") {
+            $("#showLecturaFacil").load("desactivarLecturaFacil.html");
+        }
+        $("#botonLecturaFacil").click(function() {
+            if (localStorage.getItem("lecturaFacil") == "no") {
+                $("#showLecturaFacil").load("activarLecturaFacil.html");
+                localStorage.setItem("lecturaFacil", "si");
+            } else if (localStorage.getItem("lecturaFacil") == "si") {
+                $("#showLecturaFacil").load("desactivarLecturaFacil.html");
+                localStorage.setItem("lecturaFacil", "no");
+            }
+        })
+    });
+
 });
