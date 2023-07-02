@@ -11,12 +11,15 @@ const activarPopUp = () => {
 } 
 
 const cierraPopUp = (event) => {
+    console.log(event.target.attributes[0]?.nodeValue)
     if (event.target.attributes[0]?.nodeValue == "cierra-popup"){
-        console.log("No activar Lectura Fácil");
-        localStorage.setItem('lecturaFacil', 'no');
-    } else {
-        console.log("Activar Lectura Fácil");
+        console.log("No Desactivar Lectura Fácil");
         localStorage.setItem('lecturaFacil', 'si');
+    } else {
+        document.body.innerHTML = document.body.innerHTML.replace("<style>.no-lectura-facil {display: none !important;}</style>" , "<style>.si-lectura-facil {display: none !important;}</style>");
+        console.log("Desactivar Lectura Fácil");
+        localStorage.setItem('lecturaFacil', 'no');
+
     }
     document.body.style.overflow = "initial";
     let popup = document.getElementById("popup-inicio-web");
@@ -38,6 +41,23 @@ const cierraMenu = () => {
     menu.style.left = "100vw";
 }
 
+const checkSiLecturaFacil = () => {
+    if (localStorage.getItem("lecturaFacil") == "no") {
+        document.body.innerHTML = document.body.innerHTML.replace("<style>.no-lectura-facil {display: none !important;}</style>" , "<style>.si-lectura-facil {display: none !important;}</style>");
+    }
+}
+
+const cambiaLecturaFacil = () => {
+    console.log("Cambiando modo Lectura Fácil");
+    if (localStorage.getItem("lecturaFacil") == "no") {
+        document.body.innerHTML = document.body.innerHTML.replace("<style>.no-lectura-facil {display: none !important;}</style>" , "<style>.si-lectura-facil {display: none !important;}</style>");
+        localStorage.setItem("lecturaFacil", "si");
+    } else if (localStorage.getItem("lecturaFacil") == "si") {
+        document.body.innerHTML = document.body.innerHTML.replace("<style>.si-lectura-facil {display: none !important;}</style>" , "<style>.no-lectura-facil {display: none !important;}</style>");
+        localStorage.setItem("lecturaFacil", "no");
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", function(){
     var path = window.location.pathname;
@@ -47,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);
         document.getElementById("boton-activar").addEventListener("click", cierraPopUp);
     }
+    checkSiLecturaFacil();
     document.getElementById("abreMenu").addEventListener("click", abreMenu);
     document.getElementById("cierraMenu").addEventListener("click", cierraMenu);
+    document.getElementById("botonLecturaFacil").addEventListener("click", cambiaLecturaFacil);
 });

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/script.js"></script>
     <title>Un Gusto Conocerte</title>
@@ -13,11 +14,20 @@
 <body>
     <div id="popup-inicio-web">
         <div id="popup-carta">
-            <span id="cierra-popup" class="material-symbols-outlined">close</span>
+            <h2>¡HOLA!</h2>
+            <p>
+                Esta web está escrita en Lectura Fácil. <br>
+                Puedes desactivarla cuando quieras <br>
+                pulsando este botón:
+            </p>
+            <div id="cierra-popup">
+                <p style="pointer-events: none;">CERRAR</p>
+                <span style="pointer-events: none;" class="material-symbols-outlined">close</span>
+            </div>
             <div id="boton-activar">
                 <img src="./img/icono-lectura-facil.png" alt="">
                 <div id="boton-activar-texto">
-                    <p>ACTIVAR</p>
+                    <p>DESACTIVAR</p>
                     <p>LECTURA FÁCIL</p>
                 </div>
             </div>
@@ -42,7 +52,8 @@
             </div>
             <div id="botonLecturaFacil">
                 <img src="./img/icono-lectura-facil.png" alt="">
-                <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+                <p class="si-lectura-facil">DESACTIVAR<br> LECTURA FÁCIL</p>
+                <p class="no-lectura-facil">ACTIVAR<br> LECTURA FÁCIL</p>
             </div>
         </div>
         <!-- <img src="./img/logo-grande.png" id="logoPresentacion" alt=""> -->
@@ -54,7 +65,7 @@
             <p>HAZ SCROLL</p>
         </a>
     </header>
-    <section id="quienes-somos">
+    <section id="quienes-somos" class="no-lectura-facil">
         <div id="quienes-todo">
             <div id="quienes-uno">
                 <h1>¡HOLA!</h1>
@@ -62,8 +73,24 @@
             </div>
             <div id="quienes-dos">
                 <p> Un gusto conocerte nace con el objetivo de dar voz a las personas con síndrome de Down a través de aquellos aspectos que les hacen únicos como personas más allá de una  etiqueta diagnóstica.
-                <br></br>
+                <br><br>
                 <p> Queremos eliminar los estigmas presentes en la población general hacia el colectivo de personas con síndrome de Down para lograr una sociedad inclusiva y respetuosa hacia todos y todas.
+            </div>
+        </div>
+    </section>
+    <section id="quienes-somos" class="si-lectura-facil">
+        <div id="quienes-todo">
+            <div id="quienes-uno">
+                <h1>¡HOLA!</h1>
+                <h2>SOMOS UNA INICIATIVA <br> DE SENSIBILIZACIÓN <br> SOBRE EL SÍNDROME DOWN</h2>
+            </div>
+            <div id="quienes-dos">
+                <p> Un gusto conocerte nace con el objetivo de dar voz <br> a las personas con síndrome de Down <br> a través de las cosas que les hacen personas únicas.
+                <br><br>
+                <p> Queremos que la gente no tenga prejuicios <br>
+                    hacia las personas con síndrome de Down. <br>
+                    Si todos y todas colaboramos, <br>
+                    tendremos una sociedad inclusiva y respetuosa.
             </div>
         </div>
     </section>
@@ -89,6 +116,8 @@
         </form>
         <p id="declaracionCopy">© UN GUSTO CONOCERTE | 2023</p>
     </footer>
+
+    <style>.no-lectura-facil {display: none !important;}</style>
 </body>
 
 </html>

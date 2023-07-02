@@ -16,10 +16,6 @@ a {
     color: black;
 }
 
-.no-lectura-facil {
-    display: none;
-}
-
 .si-lectura-facil {
     line-height: 2em;
 }
@@ -49,13 +45,35 @@ a {
     border-radius: 50px;
     top: calc((25vh + 4em) / 2);
     left: 10vw;
+    padding: 3em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#popup-carta h2 {
+    font-size: 7em;
+}
+
+#popup-carta > p {
+    font-size: 3em;
 }
 
 #cierra-popup {
     position: absolute;
     right: 2rem;
     top: 1.5rem;
-    color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#cierra-popup p {
+    font-size: 1.5em;
+}
+
+#cierra-popup span {
     font-size: 3em;
 }
 
@@ -206,6 +224,7 @@ nav div {
 
 #botonLecturaFacil p {
     font-size: 0.75em;
+    line-height: initial;
 }
 
 #presentacion a {
@@ -271,6 +290,22 @@ nav div {
 #quienes-uno * {
     font-weight: 200;
 }
+
+#quienes-somos.si-lectura-facil {
+    justify-content: initial;
+}
+
+#quienes-somos.si-lectura-facil #quienes-todo {
+    max-width: 50vw;
+    flex-direction: column;
+}
+
+.si-lectura-facil #quienes-uno h1 {
+    margin-bottom: .75em;
+}
+
+
+
 
 footer {
     background-color: black;
@@ -622,6 +657,7 @@ footer p {
     background-color: var(--color-corporativo);
     width: 30%;
     padding: 0 1em;
+    padding-bottom: 1em;
     text-align: center;
     display: grid;
     grid-template-rows: auto 8em;
@@ -844,14 +880,24 @@ footer p {
 }
 
 #conocePuntosVenta {
-    height: calc(100vh - 4em);
     background-color: var(--color-corporativo);
     padding: 4em;
 }
 
-#conocePuntosVenta h2 {
+#conocePuntosVenta h2.no-lectura-facil {
     font-size: 3em;
     margin-bottom: 2em;
+}
+
+#conocePuntosVenta h2.si-lectura-facil {
+    font-size: 3em;
+    line-height: initial;
+}
+
+#conocePuntosVenta > p.si-lectura-facil {
+    font-size: 2em;
+    line-height: initial;
+    margin: 2em 0;
 }
 
 #puntosVenta {

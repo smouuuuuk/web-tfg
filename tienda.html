@@ -32,7 +32,8 @@
             </div>
             <div id="botonLecturaFacil">
                 <img src="./img/icono-lectura-facil.png" alt="">
-                <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+                <p class="si-lectura-facil">DESACTIVAR<br> LECTURA FÁCIL</p>
+                <p class="no-lectura-facil">ACTIVAR<br> LECTURA FÁCIL</p>
             </div>
         </div>
     </header>
@@ -75,7 +76,13 @@
     </section>
 
     <section id="conocePuntosVenta">
-        <h2>CONOCE NUESTROS <br> PUNTOS DE VENTA FÍSICOS</h2>
+        <h2 class="si-lectura-facil">CONOCE NUESTROS <br> PUNTOS DE VENTA FÍSICOS</h2>
+        <h2 class="no-lectura-facil">CONOCE NUESTROS <br> PUNTOS DE VENTA FÍSICOS</h2>
+        <p class="si-lectura-facil">
+            Haz click sobre <br>
+            la dirección para verla <br>
+            en un mapa.
+        </p>
         <div id="puntosVenta">
             <div class="puntoVenta">
                 <a href="https://downmadrid.org/">DOWN MADRID</a>
@@ -122,6 +129,8 @@
         </form>
         <p id="declaracionCopy">© UN GUSTO CONOCERTE | 2023</p>
     </footer>
+
+    <style>.no-lectura-facil {display: none !important;}</style>
 </body>
 
 </html>

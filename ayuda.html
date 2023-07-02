@@ -32,18 +32,26 @@
             </div>
             <div id="botonLecturaFacil">
                 <img src="./img/icono-lectura-facil.png" alt="">
-                <p>DESACTIVAR<br> LECTURA FÁCIL</p>
+                <p class="si-lectura-facil">DESACTIVAR<br> LECTURA FÁCIL</p>
+                <p class="no-lectura-facil">ACTIVAR<br> LECTURA FÁCIL</p>
             </div>
         </div>
         <div id="quieres-ayudar">
             <h2 class="texto-colabora">AYÚDANOS A <br> DISEÑAR</h2>
             <div id="disenar">
-                <div id="disenar-texto">
+                <div id="disenar-texto" class="no-lectura-facil">
                     <p>¿Te gustaría diseñar el próximo libro con nosotros?</p>
                     <br>
                     <p>Si eres diseñador o diseñadora puedes formar parte del proyecto diseñando con nosotros de formar activa.</p>
                     <br>
                     <p>Para participar solo tienes que rellenar el formulario a continuación y nos pondremos en contacto contigo.</p>
+                </div>
+                <div id="disenar-texto" class="si-lectura-facil">
+                    <p>¿Te gustaría diseñar <br> el próximo libro con nosotros?</p>
+                    <br>
+                    <p>Si eres diseñador o diseñadora <br> puedes formar parte del proyecto <br> diseñando con nosotros de formar activa.</p>
+                    <br>
+                    <p>Para participar solo tienes que rellenar el formulario <br> a continuación y nos pondremos en contacto contigo.</p>
                 </div>
                 <form id="disenar-form">
                     <div id="disenar-nombre" class="disenar-text">
@@ -75,10 +83,17 @@
     <section id="lectura-facil">
         <h2 class="texto-colabora">LA LECTURA <br> FÁCIL</h2>
         <div id="lectura-facil-todo">
-            <div id="lectura-facil-texto">
+            <div id="lectura-facil-texto" class="no-lectura-facil">
                 <p>Nosotros usamos la lectura fácil con el objetivo de que la información sea lo más accesible posible para todos y todas.</p>
                 <br>
                 <p>Estamos trabajando en un Manual de Buenas Prácticas totalmente gratuito, donde podrás conocer más sobre la lectura fácil y como poder aplicarla.</p>
+                <br>
+                <p>Pon tu mail aquí y te avisaremos cuando esté disponible:</p>
+            </div>
+            <div id="lectura-facil-texto" class="si-lectura-facil">
+                <p>Nosotros usamos la lectura fácil <br> para que la información sea más fácil de entender <br> para todos y todas.</p>
+                <br>
+                <p>Estamos trabajando en un Manual de Buenas Prácticas <br> totalmente gratuito, <br> donde podrás conocer más sobre la lectura fácil <br> y cómo poder aplicarla.</p>
                 <br>
                 <p>Pon tu mail aquí y te avisaremos cuando esté disponible:</p>
             </div>
@@ -114,6 +129,8 @@
         </form>
         <p id="declaracionCopy">© UN GUSTO CONOCERTE | 2023</p>
     </footer>
+
+    <style>.no-lectura-facil {display: none !important;}</style>
 </body>
 
 </html>
