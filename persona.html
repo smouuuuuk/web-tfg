@@ -17,10 +17,10 @@
         <div>
             <ul id="navLinks">
                 <li id="cierraMenu"><span class="material-symbols-outlined">close</span></li>
-                <li class="menu-active"><a href=".">INICIO</a></li>
-                <li><a href="historias.html">HISTORIAS</a></li>
+                <li><a href=".">INICIO</a></li>
+                <li class="menu-active"><a href="historias.html">HISTORIAS</a></li>
                 <li><a href="colabora.html">PARTICIPA</a></li>
-                <li><a href="">TIENDA</a></li>
+                <li><a href="tienda.html">TIENDA</a></li>
             </ul>
         </div>
     </nav>
@@ -38,9 +38,16 @@
         <div id="libro">
             <div id="libroTexto">
                 <h1>RENÉ</h1>
-                <p>René es observador, meticuloso y fiestero.
+                <p class="no-lectura-facil">
+                    René es observador, meticuloso y fiestero.
                     Además es el alma de la fiesta. Le encantan los cumpleaños y las celebraciones. 
-                    <br>¡Siempre está preparado para unos bailes!</p>
+                    <br>¡Siempre está preparado para unos bailes!
+                </p>
+                <p class="si-lectura-facil">
+                    René es observador y fiestero. <br>
+                    Le encantan los cumpleaños y las celebraciones. <br>
+                    ¡Siempre está preparado para unos bailes!
+                </p>
                 
                 <div id="libroImagenVert">
                     <img src="./img/libro-rene.png">
@@ -53,15 +60,46 @@
         </div>
     </header>
     <section id="videoPersona">
+        <h2>VIDEO TRÁILER RENÉ</h2>
         <img src="./img/rene-video.png"></div>
+        <p>
+            Pulsa el botón de Play: <span class="material-symbols-outlined">play_circle</span> <br>
+            para ver el video.
+        </p>
+
     </section>
     <section id="albumPersona">
-        <h2>EL ÁLBUM DE RENÉ</h2>
-        <div id="carruselFotos">
-            <span class="material-symbols-outlined">arrow_back_ios</span>
-            <img id="foto1-placeholder" src="./img/rene-foto2.png">
-            <img id="foto2-placeholder" src="./img/rene-foto1.png">
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        <div class="no-lectura-facil">
+            <h2>EL ÁLBUM DE RENÉ</h2>
+            <div id="carruselFotos">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+                <img id="foto1-placeholder" src="./img/rene-foto2.png">
+                <img id="foto2-placeholder" src="./img/rene-foto1.png">
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+        </div>
+        <div class="si-lectura-facil">
+            <h2>EL ÁLBUM DE RENÉ</h2>
+            <div id="carruselFotos">
+                <figure id="foto1-galeria" >
+                    <img src="./img/rene-foto2.png">
+                </figure>
+                <figure id="foto2-galeria">
+                    <img src="./img/rene-foto1.png">
+                </figure>
+                <figure id="foto3-galeria">
+                    <img src="./img/rene-foto3.png">
+                </figure>
+                <figure id="foto4-galeria">
+                    <img src="./img/rene-foto4.png">
+                </figure>
+                <figure id="foto5-galeria">
+                    <img src="./img/rene-foto5.png">
+                </figure>
+                <figure id="foto6-galeria">
+                    <img src="./img/rene-foto6.png">
+                </figure>
+            </div>
         </div>
     </section>
     
