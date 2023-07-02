@@ -16,7 +16,7 @@ const cierraPopUp = (event) => {
         console.log("No Desactivar Lectura Fácil");
         localStorage.setItem('lecturaFacil', 'si');
     } else {
-        document.body.innerHTML = document.body.innerHTML.replace("<style>.no-lectura-facil {display: none !important;}</style>" , "<style>.si-lectura-facil {display: none !important;}</style>");
+        $("#showLecturaFacil").load("desactivarLecturaFacil.html");
         console.log("Desactivar Lectura Fácil");
         localStorage.setItem('lecturaFacil', 'no');
 
