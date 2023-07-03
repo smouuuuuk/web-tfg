@@ -59,6 +59,10 @@ a {
     font-size: 3em;
 }
 
+#boton-activar img {
+    height: 40px;
+}
+
 #cierra-popup {
     position: absolute;
     right: 2rem;
@@ -603,13 +607,10 @@ footer p {
     font-size: 4em;
 }
 
-#foto1-placeholder{
-    height: 450px;
+#carruselFotos span:hover {
+    cursor: pointer;
 }
 
-#foto2-placeholder{
-    height: 450px;
-}
 
 .si-lectura-facil #carruselFotos {
     display: grid;
@@ -617,16 +618,19 @@ footer p {
     grid-template-columns: repeat(5, auto);
     align-items: initial;
     justify-content: initial;
+    gap: initial;
 }
 
 .si-lectura-facil #carruselFotos figure {
     overflow: hidden;
     border-radius: 25px;
+    margin: .5em;
 }
 
 .si-lectura-facil #carruselFotos img {
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #foto1-galeria, #foto2-galeria, #foto3-galeria {
@@ -643,6 +647,23 @@ footer p {
 
 #foto4-galeria {
     grid-column: 1/3;
+}
+
+.no-lectura-facil #carruselFotos img {
+    height: 400px;
+}
+
+#carruselFotos #contendor-fotos {
+    width: 77%;
+    overflow: hidden;
+}
+
+#carruselFotos #todas-fotos {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    transition: transform 0.03s linear;
+    transform: translateX(0);
 }
 
 
@@ -1080,12 +1101,42 @@ footer p {
         font-size: 0.6em;
     }
 
-    #presentacion > img {
-        max-width: 80%;
+    #presentacion {
+        display: block;
     }
 
-    #quienes-todo {
+    #presentacion figure {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    #presentacion figure video {
+        height: initial;
+        width: 200vw;
+    }
+
+    #quienes-somos {
+        height: initial;
+        padding: 4em 5%;
+    }
+
+    #quienes-uno h2 {
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+
+    #quienes-somos.si-lectura-facil #quienes-dos p {
+        font-size: .9em;
+    }
+
+    #texto-escondido {
+        height: 10em;
+    }
+
+    #quienes-todo, #quienes-somos.si-lectura-facil #quienes-todo {
         flex-direction: column;
+        max-width: initial;
     }
 
 
@@ -1095,12 +1146,22 @@ footer p {
         padding: 0 2em;
     }
 
+    #presentacionHistorias h3.si-lectura-facil {
+        font-size: 1em;
+    }
+
     #historias {
         grid-template-columns: initial;
         grid-template-rows: initial;
         grid-auto-rows: auto;
     }
 
+
+
+
+    #libroTexto > p.si-lectura-facil {
+        font-size: 0.9em;
+    }
 
 
 
@@ -1191,12 +1252,12 @@ footer p {
         display: flex;
         margin-top: 2em;
         margin-bottom: 5em;
-        width: calc(100vw - 2em);
+        width: 100%;
         justify-content: center
     }
 
     #libroImagenVert img {
-        width: 80%;
+        width: 70%;
     }
 
     #videoPersona {
@@ -1204,9 +1265,18 @@ footer p {
         margin: 4em 0;
     }
 
+    #videoPersona h2{
+        margin: 0 1rem;
+        font-size: 2em;
+    }
+
     #videoPersona img {
         width: 80%;
         height: initial;
+    }
+
+    #videoPersona p {
+        margin-left: 1rem;
     }
 
     #albumPersona{
@@ -1228,5 +1298,66 @@ footer p {
     #carruselFotos img {
         height: 300px;
     }
+
+    .si-lectura-facil #carruselFotos {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    #foto1-galeria, #foto3-galeria {
+        grid-row: 1;
+    }
+
+    #foto2-galeria {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+
+    #foto5-galeria, #foto6-galeria {
+        grid-row: 3;
+    }
+
+    #foto4-galeria {
+        grid-row: 4;
+        grid-column: 1/3;
+    }
+
+
+    #productosTienda {
+        padding: 10em 2em 2em 2em;
+    }
+
+    #productosTiendaTodo {
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .producto {
+        width: 300px;
+    }
+
+    .producto img {
+        width: 300px;
+    }
+
+    #conocePuntosVenta {
+        padding: 2em;
+    }
+
+    #conocePuntosVenta h2.si-lectura-facil {
+        font-size: 1.4em;
+    }
+
+    #conocePuntosVenta > p.si-lectura-facil {
+        font-size: 1.25em;
+    }
+
+    .puntoVenta p {
+        width: 150px;
+    }
+
+
+
 
 }

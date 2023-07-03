@@ -13,7 +13,7 @@
 
 <body>
     <nav>
-        <a id="imagen-inicio" href="."><img src="./img/logo-inicio.png" id="isotipo" alt=""></a>
+        <a id="imagen-inicio" href="."><img src="./img/logotipo.svg" id="isotipo" alt=""></a>
         <span id="abreMenu" class="material-symbols-outlined">menu</span>
         <div>
             <ul id="navLinks">
@@ -32,7 +32,7 @@
                 <p><a href="./historias.html" id="navegacion-a-historias">HISTORIAS</a> > RENÉ</p>
             </div>
             <div id="botonLecturaFacil">
-                <img src="./img/icono-lectura-facil.png" alt="">
+                <img src="./img/icono-lectura-facil.svg" alt="">
                 <p class="si-lectura-facil">DESACTIVAR<br> LECTURA FÁCIL</p>
                 <p class="no-lectura-facil">ACTIVAR<br> LECTURA FÁCIL</p>
             </div>
@@ -64,7 +64,7 @@
     <section id="videoPersona">
         <h2>VIDEO TRÁILER RENÉ</h2>
         <img src="./img/rene-video.png"></div>
-        <p>
+        <p class="si-lectura-facil">
             Pulsa el botón de Play: <span class="material-symbols-outlined">play_circle</span> <br>
             para ver el video.
         </p>
@@ -74,10 +74,18 @@
         <div class="no-lectura-facil">
             <h2>EL ÁLBUM DE RENÉ</h2>
             <div id="carruselFotos">
-                <span class="material-symbols-outlined">arrow_back_ios</span>
-                <img id="foto1-placeholder" src="./img/rene-foto2.png">
-                <img id="foto2-placeholder" src="./img/rene-foto1.png">
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span id="fotos-izq" class="material-symbols-outlined" onmouseenter="mueveFotos(1)" onmouseleave="paraFotos()">arrow_back_ios</span>
+                <div id="contendor-fotos">
+                    <div id="todas-fotos">
+                        <img id="foto1-placeholder" src="./img/rene-foto2.png">
+                        <img id="foto2-placeholder" src="./img/rene-foto1.png">
+                        <img src="./img/rene-foto3.png">
+                        <img src="./img/rene-foto4.png">
+                        <img src="./img/rene-foto5.png">
+                        <img src="./img/rene-foto6.png">
+                    </div>
+                </div>
+                <span id="fotos-drch" class="material-symbols-outlined" onmouseenter="mueveFotos(0)" onmouseleave="paraFotos()">arrow_forward_ios</span>
             </div>
         </div>
         <div class="si-lectura-facil">
