@@ -334,7 +334,7 @@ nav div {
     display: inline-block;
 }
 
-#quienes-somos .leer-mas p:hover {
+#quienes-somos .leer-mas:hover {
     cursor: pointer;
 }
 
@@ -712,7 +712,7 @@ footer p {
     padding-bottom: 1em;
     text-align: center;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: 12em auto;
     border-radius: 25px;
     aspect-ratio: 1/1;
 }
@@ -723,24 +723,31 @@ footer p {
 }
 
 .colabora-uno {
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .colabora img {
-    width: 60px;
-    margin: 2em 0;
+    height: 60px;
+    margin-top: 2em;
 }
 
 #carrito {
-    width: 80px;
+    transform: scale(1.3);
 }
 
-#ayudanosimg {
-    margin-bottom: 50px;
+#hablaimg {
+    transform: scale(1.2);
 }
 
 .colabora a {
     text-decoration: underline;
+}
+
+.colabora p {
+    margin-top: 2em;
 }
 
 
@@ -1129,6 +1136,7 @@ footer p {
     
     #botonLecturaFacil p {
         font-size: 0.6em;
+        font-weight: 500;
     }
 
     #presentacion {
@@ -1148,12 +1156,12 @@ footer p {
     }
 
     #quienes-somos {
-        height: initial;
-        padding: 4em 5%;
+        min-height: calc(100vh - 4em);
+        padding: 4em 10%;
     }
 
     #quienes-uno h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 500;
     }
 
@@ -1178,6 +1186,11 @@ footer p {
         flex-direction: column;
         max-width: initial;
     }
+    
+    
+    #flecha-texto-escondido {
+        transform: translateY(16px) rotate(0);
+    }
 
 
 
@@ -1199,10 +1212,11 @@ footer p {
 
     .historia {
         grid-template-rows: 80% 1fr;
+        aspect-ratio: 3/4;
     }
 
     .historia-placeholder {
-        width: 85%;
+        width: 115%;
     }
 
 
@@ -1241,14 +1255,32 @@ footer p {
     
     .colabora {
         min-width: 80%;
+        display: flex;
+        flex-direction: column;
+        aspect-ratio: initial;
+        gap: 1em;
+        padding: 1.5em;
+    }
+
+    .colabora img {
+        margin: 0;
+    }
+
+    .colabora p {
+        margin-top: 0;
+    }
+
+    #ayudanosimg {
+        margin: 1em;
     }
     
     .colabora-uno {
-        margin-bottom: 2em;
+        margin-bottom: 0;
     }
 
     .colabora p.si-lectura-facil {
         font-size: .8em;
+        letter-spacing: -.3px;
     }
     
     
@@ -1261,7 +1293,7 @@ footer p {
     }
     
     #quieres-ayudar h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         margin: 0 1rem;
     }
     
@@ -1270,9 +1302,17 @@ footer p {
         flex-direction: column;
         padding: 1em;
     }
+
+    #disenar-form label, #disenar-form p, #lectura-email label {
+        font-size: .8em;
+    }
+
+    #disenar-texto.si-lectura-facil p {
+        font-size: .9em;
+    }
     
     #lectura-facil h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         margin: 0 1rem;
     }
     
@@ -1281,6 +1321,11 @@ footer p {
         flex-direction: column;
         padding: 1em;
         margin-bottom: 2em;
+    }
+
+    #lectura-facil-texto.si-lectura-facil p {
+        font-size: .8em;
+        letter-spacing: -.5px;
     }
     
     
@@ -1436,7 +1481,8 @@ footer p {
     }
 
     #conocePuntosVenta h2.si-lectura-facil {
-        font-size: 1.4em;
+        font-size: 1.6em;
+        letter-spacing: -1.2px;
     }
 
     #conocePuntosVenta > p.si-lectura-facil {

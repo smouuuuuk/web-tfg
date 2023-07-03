@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function(){
     if (page == "" || page == "index.html") {
         document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);
         document.getElementById("boton-activar").addEventListener("click", cierraPopUp);
-        document.getElementById("cambiar-texto-escondido").addEventListener("click", cambiaTextoEscondido);
+        document.getElementsByClassName("leer-mas")[0].addEventListener("click", cambiaTextoEscondido);
     }
     document.getElementById("abreMenu").addEventListener("click", abreMenu);
     document.getElementById("cierraMenu").addEventListener("click", cierraMenu);
