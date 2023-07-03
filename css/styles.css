@@ -219,7 +219,7 @@ nav div {
 }
 
 #botonLecturaFacil img {
-    height: 40px;
+    height: 35px;
 }
 
 #botonLecturaFacil p {
@@ -263,7 +263,7 @@ nav div {
 }
 
 #quienes-somos {
-    height: 100vh;
+    height: calc(100vh - 4em);
     padding: 0 10%;
     display: flex;
     align-items: center;
@@ -304,12 +304,42 @@ nav div {
     margin-bottom: .75em;
 }
 
+#texto-escondido {
+    overflow: hidden;
+    transition: height 1s ease-out;
+    height: 7em;
+}
+
+#flecha-texto-escondido {
+    font-size: 2.5em;
+    transform: translateY(10px) rotate(0);
+    transition: transform .25s ease;
+}
+
+#flecha-texto-escondido.aparece {
+    transform: translateY(10px) rotate(-90deg);
+}
+
+#texto-escondido.escondido {
+    height: 0;
+}
+
+#quienes-somos .leer-mas p {
+    font-size: 1.5em;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+#quienes-somos .leer-mas p:hover {
+    cursor: pointer;
+}
+
 
 
 
 footer {
     background-color: black;
-    padding: 2em 2em 1em 2em;
+    padding: 3em 3em 1em 3em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);

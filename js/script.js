@@ -41,6 +41,15 @@ const cierraMenu = () => {
     menu.style.left = "100vw";
 }
 
+const cambiaTextoEscondido = () => {
+    let textoEscondido = document.getElementById("texto-escondido");
+    let flecha = document.getElementById("flecha-texto-escondido");
+    let texto = document.getElementById("cambiar-texto-escondido");
+    textoEscondido.classList.toggle("escondido");
+    flecha.classList.toggle("aparece");
+    texto.innerHTML == "QUIERO LEER MÁS" ? texto.innerHTML = "QUIERO LEER MENOS" : texto.innerHTML = "QUIERO LEER MÁS";
+}
+
 document.addEventListener("DOMContentLoaded", function(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
@@ -51,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     document.getElementById("abreMenu").addEventListener("click", abreMenu);
     document.getElementById("cierraMenu").addEventListener("click", cierraMenu);
+    document.getElementById("cambiar-texto-escondido").addEventListener("click", cambiaTextoEscondido);
 
     
     $(function() {
