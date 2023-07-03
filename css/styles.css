@@ -248,8 +248,11 @@ nav div {
     animation: 0.75s ease-in-out infinite alternate up-and-down;
 }
 
-#presentacion > img {
-    transform: translateY(32px);
+#presentacion figure {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 @keyframes up-and-down {
