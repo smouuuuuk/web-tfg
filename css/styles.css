@@ -575,7 +575,7 @@ footer p {
 }
 
 #videoPersona p {
-    margin-left: 4rem;
+    margin-left: 2rem;
     place-self: flex-start;
 }
 
@@ -727,8 +727,16 @@ footer p {
 }
 
 .colabora img {
-    height: 60px;
+    width: 60px;
     margin: 2em 0;
+}
+
+#carrito {
+    width: 80px;
+}
+
+#ayudanosimg {
+    margin-bottom: 50px;
 }
 
 .colabora a {
@@ -986,6 +994,22 @@ footer p {
 
 @media only screen and (max-width: 500px) {
 
+    #navegacion span {
+        font-weight: 300;
+    }
+
+    #navegacion p {
+        display: none;
+    }
+
+
+
+    #isotipo {
+        height: 35px;
+    }
+
+
+
     footer {
         display: flex;
         flex-direction: column;
@@ -999,8 +1023,12 @@ footer p {
     }
 
     #escribenos, #suscribete {
-        margin-top: 2rem;
+        margin-top: 3rem;
         margin-bottom: 0.5rem;
+    }
+
+    .redSocial img {
+        height: 20px;
     }
 
     #declaracionCopy {
@@ -1009,6 +1037,7 @@ footer p {
 
     #footer-form {
         place-self: initial;
+        width: auto;
     }
 
     #footer-form input[type="submit"]{
@@ -1189,13 +1218,18 @@ footer p {
     }
     
     #quieres-colaborar h2 {
-        font-size: 3em;
+        font-size: 2em;
         margin: 0 1rem;
+        margin-bottom: 1rem;
     }
     
     #quieres-colaborar p {
         font-size: 1em;
         margin: 0 1rem;
+    }
+
+    #quieres-colaborar p.si-lectura-facil {
+        font-size: .9em;
     }
     
     #formas-colaborar {
@@ -1211,6 +1245,10 @@ footer p {
     
     .colabora-uno {
         margin-bottom: 2em;
+    }
+
+    .colabora p.si-lectura-facil {
+        font-size: .8em;
     }
     
     
@@ -1303,10 +1341,15 @@ footer p {
 
     #videoPersona p {
         margin-left: 1rem;
+        font-size: .9em;
     }
 
-    #albumPersona{
+    #albumPersona {
         padding: 1em;
+    }
+
+    #albumPersona h2 {
+        font-size: 2em;
     }
 
     #albumPersona .si-lectura-facil h2 {
@@ -1353,6 +1396,17 @@ footer p {
         grid-column: 1/3;
     }
 
+    .no-lectura-facil #carruselFotos #contendor-fotos {
+        width: initial;
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+
+    .no-lectura-facil #carruselFotos #contendor-fotos img {
+        height: 300px;
+        padding: 1em 0;
+    }
 
     #productosTienda {
         padding: 10em 2em 2em 2em;
@@ -1368,11 +1422,17 @@ footer p {
     }
 
     .producto img {
-        width: 300px;
+        width: 100%;
     }
 
     #conocePuntosVenta {
         padding: 2em;
+    }
+
+    #conocePuntosVenta h2.no-lectura-facil {
+        font-size: 1.6em;
+        letter-spacing: -1.2px;
+        margin-bottom: 2rem;
     }
 
     #conocePuntosVenta h2.si-lectura-facil {
@@ -1386,6 +1446,20 @@ footer p {
     .puntoVenta p {
         width: 150px;
     }
+
+    #puntosVenta {
+        flex-wrap: initial;
+        flex-direction: column;
+    }
+
+    .puntoVenta {
+        flex-direction: column;
+    }
+
+    .puntoVenta a, .puntoVenta p {
+        width: initial;
+    }
+
 
 
 
