@@ -569,7 +569,7 @@ footer p {
 }
 
 #videoPersona h2 {
-    margin-left: 4rem;
+    margin-left: 2rem;
     font-size: 3em;
     place-self: flex-start;
 }
@@ -589,14 +589,15 @@ footer p {
 
 #albumPersona {
     padding: 2em;
+    padding-top: 4em;
 }
 
 #albumPersona h2 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 #carruselFotos {
-    margin: 4em 0;
+    margin: 2em 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,7 +681,7 @@ footer p {
 
 
 #quieres-colaborar {
-    margin-top: 9em;
+    margin-top: 12em;
     display: flex;
     flex-direction: column;
 }
@@ -711,7 +712,7 @@ footer p {
     padding-bottom: 1em;
     text-align: center;
     display: grid;
-    grid-template-rows: auto 8em;
+    grid-template-rows: auto auto;
     border-radius: 25px;
     aspect-ratio: 1/1;
 }
@@ -722,7 +723,7 @@ footer p {
 }
 
 .colabora-uno {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 .colabora img {
@@ -1109,6 +1110,7 @@ footer p {
         display: flex;
         justify-content: center;
         height: 100vh;
+        overflow: hidden;
     }
 
     #presentacion figure video {
@@ -1126,8 +1128,17 @@ footer p {
         font-weight: 500;
     }
 
-    #quienes-somos.si-lectura-facil #quienes-dos p {
+    #quienes-somos p {
         font-size: .9em;
+    }
+
+    #quienes-somos.si-lectura-facil #quienes-uno h2 {
+        letter-spacing: -1px;
+    }
+
+    #quienes-somos.si-lectura-facil #quienes-dos p {
+        font-size: .8em;
+        letter-spacing: -.8px;
     }
 
     #texto-escondido {
@@ -1143,11 +1154,11 @@ footer p {
 
 
     #presentacionHistorias h3 {
-        padding: 0 2em;
+        padding: 0 2rem;
     }
 
     #presentacionHistorias h3.si-lectura-facil {
-        font-size: 1em;
+        font-size: .85em;
     }
 
     #historias {
@@ -1157,91 +1168,102 @@ footer p {
     }
 
 
+    .historia {
+        grid-template-rows: 80% 1fr;
+    }
 
-
-    #libroTexto > p.si-lectura-facil {
-        font-size: 0.9em;
+    .historia-placeholder {
+        width: 85%;
     }
 
 
 
-
+    
+    
+    
+    
+    
+    
     #quieres-colaborar {
         margin-top: 10em;
     }
-
+    
     #quieres-colaborar h2 {
         font-size: 3em;
         margin: 0 1rem;
     }
-
+    
     #quieres-colaborar p {
         font-size: 1em;
         margin: 0 1rem;
     }
-
+    
     #formas-colaborar {
         flex-direction: column;
         gap: 2em;
         margin: initial;
         align-items: center;
     }
-
+    
     .colabora {
         min-width: 80%;
     }
-
+    
     .colabora-uno {
         margin-bottom: 2em;
     }
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     #quieres-ayudar {
         margin-top: 10em;
     }
-
+    
     #quieres-ayudar h2 {
         font-size: 3em;
         margin: 0 1rem;
     }
-
+    
     #disenar {
         display: flex;
         flex-direction: column;
         padding: 1em;
     }
-
+    
     #lectura-facil h2 {
         font-size: 3em;
         margin: 0 1rem;
     }
-
+    
     #lectura-facil-todo {
         display: flex;
         flex-direction: column;
         padding: 1em;
         margin-bottom: 2em;
     }
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     #presentacionPersona #libro {
         display: flex;
     }
-
+    
     #libroTexto {
         margin: 0 1em;
     }
-
+    
     #libroTexto p {
         margin: 1em 0;
+    }
+    
+    #libroTexto > p.si-lectura-facil {
+        font-size: 0.8em;
     }
 
     #libroImagen {
@@ -1255,9 +1277,13 @@ footer p {
         width: 100%;
         justify-content: center
     }
-
+    
     #libroImagenVert img {
         width: 70%;
+    }
+    
+    #libroTexto .button {
+        font-size: .75em;
     }
 
     #videoPersona {
@@ -1283,9 +1309,13 @@ footer p {
         padding: 1em;
     }
 
+    #albumPersona .si-lectura-facil h2 {
+        line-height: initial;
+    }
+
     #carruselFotos {
         justify-content: initial;
-        margin: 2em 0;
+        margin: 0;
         padding: 1em 0;
         overflow-x: scroll;
         gap: 1em;
