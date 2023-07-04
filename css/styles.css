@@ -463,7 +463,7 @@ footer p {
 #historias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border: 1px solid black;
+    outline: 1px solid black;
 }
 
 .historia {
