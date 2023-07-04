@@ -7,8 +7,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    scroll-behavior: smooth;
     font-weight: 400;
+}
+
+html {
+    scroll-behavior: auto !important;
 }
 
 a {
