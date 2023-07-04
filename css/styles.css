@@ -708,14 +708,15 @@ footer p {
 #formas-colaborar {
     margin: 0 4rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 4em 0;
+    flex-wrap: wrap;
+    padding: 4em 8em;
+    justify-content: center;
+    gap: 2em;
 }
 
 .colabora {
     background-color: var(--color-corporativo);
-    width: 30%;
+    width: 40%;
     padding: 0 1em;
     padding-bottom: 1em;
     text-align: center;
@@ -1310,6 +1311,7 @@ footer p {
     }
     
     #formas-colaborar {
+        padding: 2em 0;
         flex-direction: column;
         gap: 2em;
         margin: initial;
@@ -1317,7 +1319,7 @@ footer p {
     }
     
     .colabora {
-        min-width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         aspect-ratio: initial;
