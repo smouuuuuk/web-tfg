@@ -1469,7 +1469,7 @@ footer p {
         justify-content: initial;
         margin: 0;
         padding: 1em 0;
-        overflow-x: scroll;
+        overflow: hidden;
         gap: 1em;
     }
 
