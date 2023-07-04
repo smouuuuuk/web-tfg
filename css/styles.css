@@ -731,8 +731,12 @@ footer p {
 }
 
 .colabora h2 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     padding: 0 .5em;
+}
+
+.colabora h2.si-lectura-facil {
+    line-height: initial;
 }
 
 .colabora-uno {
@@ -1152,12 +1156,30 @@ footer p {
         grid-template-rows: repeat(5, 1fr);
         gap: 0;
         align-items: center;
-        padding: 0 2em;
     }
 
-    #navLinks li {
+    #navLinks li:first-child {
+        font-size: 2em;
+        margin-right: 1em;
+    }
+
+    #navLinks li:nth-child(2) {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    #navLinks li:nth-child(n+3):nth-child(-n+4) {
+        border-bottom: 2px solid black;
+    }
+
+    #navLinks li:nth-child(n+2) {
         text-align: center;
         font-size: 2em;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #cierraMenu {
