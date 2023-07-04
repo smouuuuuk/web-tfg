@@ -1214,6 +1214,7 @@ footer p {
     }
 
     #quienes-somos {
+        height: unset;
         min-height: calc(100vh - 4em);
         padding: 4em 10%;
     }
