@@ -98,6 +98,18 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("cierra-popup").addEventListener("click", cierraPopUp);
         document.getElementById("boton-activar").addEventListener("click", cierraPopUp);
         document.getElementsByClassName("leer-mas")[0].addEventListener("click", cambiaTextoEscondido);
+        document.getElementById("scroll-quienes").addEventListener("click", function() {
+            console.log("click scroll");
+            if (localStorage.getItem('lecturaFacil') == 'si'){
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#quienes-somos.si-lectura-facil").offset().top - $("nav").height()
+                }, 1000);
+            } else if (localStorage.getItem('lecturaFacil') == 'no') {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#quienes-somos.no-lectura-facil").offset().top - $("nav").height()
+                }, 1000);
+            }
+        });
     }
     document.getElementById("abreMenu").addEventListener("click", abreMenu);
     document.getElementById("cierraMenu").addEventListener("click", cierraMenu);

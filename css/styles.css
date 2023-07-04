@@ -231,7 +231,7 @@ nav div {
     line-height: initial;
 }
 
-#presentacion a {
+#presentacion #scroll-quienes {
     position: absolute;
     bottom: 2%;
     left: 2%;
@@ -240,6 +240,10 @@ nav div {
     display: flex;
     gap: .5em;
     align-items: center;
+}
+
+#scroll-quienes:hover {
+    cursor: pointer;
 }
 
 #presentacion span {
