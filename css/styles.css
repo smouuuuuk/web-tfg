@@ -586,8 +586,9 @@ footer p {
     transform: translateY(.25em);
 }
 
-#videoPersona img {
-    width: 60%;
+#videoRene {
+    width: 70%;
+    aspect-ratio: 16/9;
 }
 
 #albumPersona {
@@ -1436,9 +1437,8 @@ footer p {
         font-size: 2em;
     }
 
-    #videoPersona img {
+    #videoRene {
         width: 80%;
-        height: initial;
     }
 
     #videoPersona p {
